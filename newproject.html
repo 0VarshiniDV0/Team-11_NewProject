@@ -119,3 +119,8 @@ input, select {
       <!-- Combined Registration + Booking Section -->
       <section id="student-registration" class="dashboard-section">
         <h2>Register New Student & Book Hostel</h2>
+	<form onsubmit="event.preventDefault(); document.getElementById('reg-success').style.display='block'; this.reset();">
+          <input type="text" placeholder="Student Name" required />
+          <input type="email" placeholder="Email Address" required />
+          <input type="text" placeholder="Current Communication Address" required />
+          <input type="tel" placeholder="Contact Number" required />
