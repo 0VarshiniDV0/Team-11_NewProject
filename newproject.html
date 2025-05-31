@@ -204,4 +204,10 @@ input, select {
       document.querySelectorAll('.dashboard-section').forEach(section => {
         section.style.display = 'none';
       });
+ document.getElementById(id).style.display = 'block';
+    }
+
+    function logout() {
+      window.location.href = "logout.html";
+    }
 
