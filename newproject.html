@@ -4,7 +4,6 @@
   <title>Hostel Management Dashboard</title>
   <style>
     body {
-      margin: 0;
       font-family: Arial, sans-serif;
       background-color: #f0f2f5;
     }
@@ -24,7 +23,6 @@
     }
 .sidebar ul {
       list-style: none;
-      padding: 0;
     }
     .sidebar li {
       margin: 15px 0;
@@ -72,4 +70,146 @@ input, select {
       margin: 20px auto;
       font-size: 16px;
     }
+ button:hover {
+      background-color: #2c3e90;
+    }
+    .success {
+      color: green;
+      text-align: center;
+      margin-top: 10px;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+      margin: 10px 0;
+      border-radius: 8px;
+    }
+.menu-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 20px;
+    }
+    .menu-table th, .menu-table td {
+      border: 1px solid #ccc;
+      padding: 10px;
+      text-align: center;
+    }
+    .menu-table th {
+      background-color: #f4f4f4;
+    }
+</style>
+</head>
+<body>
+  <div class="container">
+    <aside class="sidebar">
+      <h2>Dashboard</h2>
+      <ul>
+        <li onclick="showSection('student-registration')">Register Student</li>
+        <li onclick="showSection('Dining-Hall-Photos')">Dining Hall Photos</li>
+        <li onclick="showSection('kitchen-menu')">Kitchen Menu</li>
+        <li onclick="showSection('hostel-photos')">Hostel Photos</li>
+        <li onclick="showSection('bedroom-photos')">Bedroom Photos</li>
+        <li onclick="logout()">Logout</li>
+      </ul>
+    </aside>
+<main class="main">
+      <!-- Combined Registration + Booking Section -->
+      <section id="student-registration" class="dashboard-section">
+        <h2>Register New Student & Book Hostel</h2>
+	<form onsubmit="event.preventDefault(); document.getElementById('reg-success').style.display='block'; this.reset();">
+          <input type="text" placeholder="Student Name" required />
+          <input type="email" placeholder="Email Address" required />
+          <input type="text" placeholder="Current Communication Address" required />
+          <input type="tel" placeholder="Contact Number" required />
+	  <select required>
+            <option value="">Gender</option>
+            <option>Female</option>
+            <option>Male</option>
+            <option>Others</option>
+          </select>
+ <input type="date" placeholder="Date of Birth" required />
+          <input type="number" placeholder="Age" required />
+	   <input type="text" placeholder="Father's Name" required />
+          <input type="text" placeholder="Father's Occupation" required />
+          <input type="text" placeholder="Mother's Name" required />
+          <input type="text" placeholder="Mother's Occupation" required />
+          <input type="text" placeholder="Name of Your College" required />
+	   <input type="text" placeholder="Course" required />
+          <input type="text" placeholder="Branch" required />
+          <input type="text" placeholder="Year" required />
+<!-- Booking Fields -->
+          <input type="text" placeholder="Room No." required />
+          <select required>
+            <option value="">Select Seater</option>
+	    <option>1 Seater</option>
+            <option>2 Seater</option>
+            <option>3 Seater</option>
+          </select>
+<select required>
+            <option value="">Select Room Type</option>
+            <option>Single Bedroom</option>
+            <option>Double Bedroom</option>
+          </select>
+<button type="submit">Submit Registration & Booking</button>
+        </form>
+        <p id="reg-success" class="success" style="display:none;">Student Registered and Hostel Booked Successfully!</p>
+      </section>
+<!-- Dining Hall Photos -->
+      <section id="Dining-Hall-Photos" class="dashboard-section">
+        <h2>Dining Hall Photos</h2>
+        <img src="C:\Users\manya\OneDrive\Desktop\manya\dining1.jpg" alt="Dining 1" />
+        <img src="C:\Users\manya\OneDrive\Desktop\manya\dining2.jpg" alt="Dining 2" />
+      </section>
 
+<!-- Kitchen Menu -->
+      <section id="kitchen-menu" class="dashboard-section">
+        <h2>Weekly Kitchen Menu</h2>
+<table class="menu-table">
+          <tr>
+            <th>Day</th>
+            <th>Tiffin</th>
+            <th>Lunch</th>
+            <th>Snacks</th>
+            <th>Dinner</th>
+          </tr>
+<tr><td>Monday</td><td>Idli & Sambar</td><td>Rice, Dal, Veg Curry</td><td>Samosa & Tea</td><td>Chapati, Paneer Curry</td></tr>
+          <tr><td>Tuesday</td><td>Dosa & Chutney</td><td>Rice, Sambar, Beans Poriyal</td><td>Puffs & Coffee</td><td>Chapati, Aloo Curry</td></tr>
+          <tr><td>Wednesday</td><td>Upma & Chutney</td><td>Fried Rice, Raita</td><td>Biscuits & Lemon Tea</td><td>Rice, Rasam, Cabbage Curry</td></tr>
+          <tr><td>Thursday</td><td>Pongal & Vada</td><td>Rice, Kurma, Papad</td><td>Banana & Tea</td><td>Chapati, Mixed Veg Curry</td></tr>
+          <tr><td>Friday</td><td>Poha & Pickle</td><td>Lemon Rice, Potato Fry</td><td>Bonda & Coffee</td><td>Rice, Dal, Brinjal Curry</td></tr>
+          <tr><td>Saturday</td><td>Rava Dosa & Chutney</td><td>Rice, Rajma, Salad</td><td>Cutlet & Tea</td><td>Chapati, Egg Curry</td></tr>
+          <tr><td>Sunday</td><td>Poori & Potato Masala</td><td>Veg Biryani, Raita</td><td>Juice & Biscuits</td><td>Rice, Chicken Curry</td></tr>
+        </table>
+      </section>
+<!-- Hostel Photos -->
+      <section id="hostel-photos" class="dashboard-section">
+        <h2>Hostel Building Photos</h2>
+        <img src="C:\Users\manya\OneDrive\Desktop\manya\hostel1.jpg" alt="Hostel Front" />
+        <img src="C:\Users\manya\OneDrive\Desktop\manya\hostel2.jpg" alt="Hostel Side" />
+      </section>
+<!-- Bedroom Photos -->
+      <section id="bedroom-photos" class="dashboard-section">
+        <h2>Bedroom Photos</h2>
+        <img src="C:\Users\manya\OneDrive\Desktop\manya\bed1.jpg" alt="Bedroom 1" />
+        <img src="C:\Users\manya\OneDrive\Desktop\manya\bed2.jpg" alt="Bedroom  2" />
+      </section>
+</main>
+  </div>
+
+  <script>
+    function showSection(id) {
+      document.querySelectorAll('.dashboard-section').forEach(section => {
+        section.style.display = 'none';
+      });
+ document.getElementById(id).style.display = 'block';
+    }
+
+    function logout() {
+      window.location.href = "logout.html";
+    }
+window.onload = function() {
+      showSection('student-registration');
+    };
+ </script>
+</body>
+</html>
