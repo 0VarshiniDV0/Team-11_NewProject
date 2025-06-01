@@ -4,7 +4,6 @@
   <title>Hostel Management Dashboard</title>
   <style>
     body {
-      margin: 0;
       font-family: Arial, sans-serif;
       background-color: #f0f2f5;
     }
@@ -24,7 +23,6 @@
     }
 .sidebar ul {
       list-style: none;
-      padding: 0;
     }
     .sidebar li {
       margin: 15px 0;
@@ -184,4 +182,35 @@ input, select {
           <tr><td>Sunday</td><td>Poori & Potato Masala</td><td>Veg Biryani, Raita</td><td>Juice & Biscuits</td><td>Rice, Chicken Curry</td></tr>
         </table>
       </section>
+<!-- Hostel Photos -->
+      <section id="hostel-photos" class="dashboard-section">
+        <h2>Hostel Building Photos</h2>
+        <img src="C:\Users\manya\OneDrive\Desktop\manya\hostel1.jpg" alt="Hostel Front" />
+        <img src="C:\Users\manya\OneDrive\Desktop\manya\hostel2.jpg" alt="Hostel Side" />
+      </section>
+<!-- Bedroom Photos -->
+      <section id="bedroom-photos" class="dashboard-section">
+        <h2>Bedroom Photos</h2>
+        <img src="C:\Users\manya\OneDrive\Desktop\manya\bed1.jpg" alt="Bedroom 1" />
+        <img src="C:\Users\manya\OneDrive\Desktop\manya\bed2.jpg" alt="Bedroom  2" />
+      </section>
+</main>
+  </div>
 
+  <script>
+    function showSection(id) {
+      document.querySelectorAll('.dashboard-section').forEach(section => {
+        section.style.display = 'none';
+      });
+ document.getElementById(id).style.display = 'block';
+    }
+
+    function logout() {
+      window.location.href = "logout.html";
+    }
+window.onload = function() {
+      showSection('student-registration');
+    };
+ </script>
+</body>
+</html>
