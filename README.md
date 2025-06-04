@@ -51,3 +51,16 @@ A simple, visually appealing HTML/CSS-based web application to manage hostel roo
 [Ashwini N]
 
 [Pradeepmaddimani]
+
+## 🎋IMAGES OF OUR PROJECT
+
+![LOGIN IMAGE](https://github.com/user-attachments/assets/2dee4047-d8c0-4011-ae6d-45d2a3dabd4f)
+![Dashboard image](https://github.com/user-attachments/assets/c6e6fcc2-1362-4d67-acdb-63f96f645076)
+![Logout image](https://github.com/user-attachments/assets/4474b801-bcdf-471d-82a4-90b35839b718)
+
+ # Contact us:
+Varshini D V[https://github.com/0VarshiniDV0/github]
+Ashwini N[https://github.com/ashwini726/github]
+Pradeep [https://github.com/pradeepmaddimani/github]
+
+
